@@ -1,9 +1,9 @@
 title: Nighthawk-Pages
 description: "August 2023 to June 2024"
-owner_name: Tirth Thakkar
-github_username: Tirth-Thakkar
-github_repo: "Nighthawk-Pages"
-baseurl: "/Nighthawk-Pages"
+owner_name: Sharon Kodali
+github_username: sharonkodali
+github_repo: "CPTproject"
+baseurl: "/CPTproject"
 remote_theme: jekyll/minima
 minima:
   social_links:
