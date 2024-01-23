@@ -7,6 +7,11 @@ form {
     background: #4e7dc3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    @media (max-width: 600px) {
+        max-width: 100%;
+    }
 
     p {
         margin-bottom: 15px;
@@ -24,6 +29,16 @@ form {
             margin-bottom: 8px;
             border: 1px solid #8d8d8d;
             border-radius: 4px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: #5e5e5e;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
         }
 
         button {
@@ -34,6 +49,17 @@ form {
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #1c2850;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
         }
     }
-}
+ margin-top: 5px;
+    }
