@@ -8,7 +8,19 @@
 </head>
 <body>
 
-    <!-- Your HTML content goes here -->
+    <form action="javascript:login_user()">
+        <p><label>
+            User ID:
+            <input type="text" name="uid" id="uid" required>
+        </label></p>
+        <p><label>
+            Password:
+            <input type="password" name="password" id="password" required>
+        </label></p>
+        <p>
+            <button>Login</button>
+        </p>
+    </form>
 
     <script type="module">
         // uri variable and options object are obtained from config.js
@@ -69,3 +81,4 @@
 
 </body>
 </html>
+
