@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    
+<body>
+    <table>
+        <tr>
+            <td>
+                <!-- html form for CRUD Operations -->
+                <form onsubmit="event.preventDefaultt();" autocomplete="off">
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email" id="email">
+                    </div><div>
+                        <label>Phone Number</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber">
+                    </div><div>
+                        <label>Password</label>
+                        <input type="text" name="password" id="password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <!-- table to list all records -->
+                <table class="list" id="volunteerlist">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+    </body>
+
+</html>
