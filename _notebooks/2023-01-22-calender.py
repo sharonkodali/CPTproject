@@ -16,11 +16,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {
-    "vscode": {
-     "languageId": "javascript"
-    }
-   },
+   "metadata": {},
    "outputs": [],
    "source": [
     "class SimpleCalendar:\n",
