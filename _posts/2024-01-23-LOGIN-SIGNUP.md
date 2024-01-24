@@ -6,7 +6,7 @@ type: hacks
 courses: { csp: {week: 20 }}
 ---
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
