@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address to Coordinates</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+
+<h3>Convert Address to Coordinates</h3>
+
+<!-- Your input form -->
+<label for="address">Enter Address:</label>
+<input type="text" id="address" placeholder="Enter an address">
+<button onclick="convertAddress()">Convert</button>
+
+<script>
+function convertAddress() {
+    // Get the address from the input field
+    var address = document.getElementById('address').value;
+
+    // Create a geocoder instance
+    var geocoder = new google.maps.Geocoder();
+
+    // Make a geocoding request
+    geocoder.geocode({ 'address': address }, function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            // Get latitude and longitude
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+
+            // Display the coordinates (you can save them to the database)
+            alert('Latitude: ' + latitude + '\nLongitude: ' + longitude);
+        } else {
+            // Handle geocoding errors
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+</script>
+
+</body>
+</html>
