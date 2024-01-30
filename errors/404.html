@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Not Found</title>
-</head>
-<body>
-    <h1>404 - Not Found</h1>
-    <p>The page you are looking for might be unavailable or does not exist. Please check the URL or go back to the homepage.</p>
-</body>
-</html>
+{% extends "layouts/base.html" %}
+{% set project = "404" %}
+
+{% block body %}
+    <div class="index">
+        <div class="center-block" style="margin: 2% 10% 10%; font-family: gilroy,serif;">
+            <div class="col-12" style="text-align: center;">
+                <h1><strong>Something Went Wrong</strong></h1>
+            </div>
+
+            <div class="jumbotron jumbotron-fluid" style="text-align: center; ">
+                <h2>Engineering is on the case!</h2>
+                <a href="/">Go Home</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block background %}
+{% endblock %}
