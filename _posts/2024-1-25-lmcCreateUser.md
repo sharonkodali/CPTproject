@@ -1,11 +1,11 @@
 ---
 comments: True
 layout: base
-title: LMC Login page
-description: cooking
+title: Sign-Up Page
+description: sign-up page for new users
 courses: {'compsci': {'week': 4}}
 type: hacks
-permalink: /lmc-createUser
+permalink: /createUser
 ---
 <style>
 
@@ -17,7 +17,7 @@ The form triggers the login_user function defined in the JavaScript below when t
 -->
 <link rel="stylesheet" href="/lmc-frontend/LMC/JS/SCSS/lmcLogin.css">
 <div id="titleContainer">
-    <h1 id="title">Let-M-Cook</h1>
+    <h1 id="title">Sign-Up Page</h1>
 </div>
 
 <div class="background">
@@ -109,7 +109,7 @@ The script defines a function when the page loads. This function is triggered wh
             }
             // Success!!!
             // Redirect to the database page
-            window.location.href = "/lmc-frontend/_posts/2024-1-23-lmcLogin.md";
+            window.location.href = "/data/database";
         })
         // catch fetch errors (ie ACCESS to server blocked)
         .catch(err => {

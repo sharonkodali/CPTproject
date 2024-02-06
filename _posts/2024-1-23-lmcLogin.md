@@ -1,8 +1,8 @@
 ---
 comments: True
 layout: base
-title: Sign-Up Page
-description: sign-up page for new users
+title: lmc
+description: 
 courses: {'compsci': {'week': 4}}
 type: hacks
 permalink: /signup
