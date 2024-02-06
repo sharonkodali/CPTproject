@@ -1,11 +1,11 @@
 ---
 comments: True
 layout: base
-title: LMC Login page
-description: cooking
+title: Sign-Up Page
+description: sign-up page for new users
 courses: {'compsci': {'week': 4}}
 type: hacks
-permalink: /lmc-login
+permalink: /signup
 ---
 <style>
 
@@ -17,7 +17,7 @@ The form triggers the login_user function defined in the JavaScript below when t
 -->
 <link rel="stylesheet" href="/lmc-frontend/LMC/JS/SCSS/lmcLogin.css">
 <div id="titleContainer">
-    <h1 id="title">Let-M-Cook</h1>
+    <h1 id="title">Sign-Up</h1>
 </div>
 
 <div class="background">
@@ -51,7 +51,7 @@ The form triggers the login_user function defined in the JavaScript below when t
             <button onclick="login_user()">Login</button>
         </p>
         <p>
-            <a href="{{site.baseurl}}/lmc-createUser">Create New User</a>
+            <a href="{{site.baseurl}}/createUser">Create New User</a>
         </p>
     </form>
 </div>
