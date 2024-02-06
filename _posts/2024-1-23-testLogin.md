@@ -26,9 +26,6 @@ The form triggers the login_user function defined in the JavaScript below when t
 
 <div class="container">
     <form id="username" action="javascript:login_user()">
-        <p>
-        <img src="/lmc-frontend/images/cookie.png" width="92px" height="100px">
-        </p>
         <!-- <p>
         <label>
             Name:
