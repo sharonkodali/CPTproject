@@ -1,61 +1,29 @@
 ---
-comments: True
+title: JWT Login (python/flask)
 layout: base
-title: lmc
-description: 
-courses: {'compsci': {'week': 4}}
-type: hacks
-permalink: /signup
+description: A login screen that interacts with Python and obtains a JWT  
+type: ccc
+courses: { csp: {week: 18 }}
 ---
-<style>
 
-</style>
 <!-- 
-A simple HTML login form with a Login action when button is pressed.  
+A simple HTML login form with a Login action when the button is pressed.  
 
 The form triggers the login_user function defined in the JavaScript below when the Login button is pressed.
 -->
-<link rel="stylesheet" href="/lmc-frontend/LMC/JS/SCSS/lmcLogin.css">
-<div id="titleContainer">
-    <h1 id="title">Sign-Up</h1>
-</div>
-
-<div class="background">
-
-</div>
-
-<div class="container">
-    <form id="username" action="javascript:login_user()">
-        <p>
-        <img src="/lmc-frontend/images/cookie.png" width="92px" height="100px">
-        </p>
-        <!-- <p>
-        <label>
-            Name:
-            <input class="userInput" type="text" name="name" id="name" required>
-        </label>
-        </p> -->
-        <p><label>
-            User ID:
-            <input class="userInput" type="text" name="uid" id="uid" required>
-        </label></p>
-        <p ><label>
-            Password:
-            <input class="userInput" type="password" name="password" id="password" required>
-        </label></p>
-        <!-- <p><label>
-            Date of Birth:
-            <input class="userInput" type="text" id="dob" required>
-        </label></p> -->
-        <p>
-            <button onclick="login_user()">Login</button>
-        </p>
-        <p>
-            <a href="{{site.baseurl}}/createUser">Create New User</a>
-        </p>
-    </form>
-</div>
-
+<form action="javascript:login_user()">
+    <p><label>
+        User ID:
+        <input type="text" name="uid" id="uid" required>
+    </label></p>
+    <p><label>
+        Password:
+        <input type="password" name="password" id="password" required>
+    </label></p>
+    <p>
+        <button>Login</button>
+    </p>
+</form>
 
 <!-- 
 Below JavaScript code is designed to handle user authentication in a web application. It's written to work with a backend server that uses JWT (JSON Web Tokens) for authentication.
@@ -63,8 +31,6 @@ Below JavaScript code is designed to handle user authentication in a web applica
 The script defines a function when the page loads. This function is triggered when the Login button in the HTML form above is pressed. 
  -->
 <script type="module">
-    localStorage.setItem('uid',newUserID);
-
     // uri variable and options object are obtained from config.js
     import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
@@ -74,10 +40,8 @@ The script defines a function when the page loads. This function is triggered wh
 
         // Set the body of the request to include login data from the DOM
         const body = {
-            // name: document.getElementById("name").value,
             uid: document.getElementById("uid").value,
             password: document.getElementById("password").value,
-            // dob: document.getElementById("dob").value
         };
 
         // Change options according to Authentication requirements
