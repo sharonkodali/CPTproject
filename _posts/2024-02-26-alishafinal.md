@@ -11,6 +11,12 @@ courses: { csp: {week: 24 }}
 ### My key commits: 
 [create favorites](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/commit/70b062ec7ba64f891ee9ec78137f93affe2efbac), [fixed some errors](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/commit/09c7e6e70cb115e2cacdc585b0390fcede9c4df3)
 
+## Team and Individual Planning
+[link to issue](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/issues/20)
+
+## More depth/detail Work
+[link to issue](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/issues/17#issuecomment-1962855374)
+
 ## CPT Requirements Implementation
 
 | Requirement                                | Explanation                                                                              |
