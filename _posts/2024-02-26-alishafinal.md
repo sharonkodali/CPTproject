@@ -6,7 +6,9 @@ type: ccc
 courses: { csp: {week: 24 }}
 ---
 
-## Individual Review 
+## Project Overview
+
+My team's project is a Southern California real estate site. Upon login, the user is met with a wide database of luxury houses in the SoCal area. Each house has further detail information about the house, along with an 'add to favorites' button. The favorites attribute is the primary feature that I focused on. For this feature, I had to create a new section of our API that focused on saving the user's selection. The user can choose their top house choices that will be stored in the favorites page.
 
 ### My key commits: 
 [create favorites](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/commit/70b062ec7ba64f891ee9ec78137f93affe2efbac), [fixed some errors](https://github.com/Real-Estate-Analyzation/RealEstateFrontend/commit/09c7e6e70cb115e2cacdc585b0390fcede9c4df3)
