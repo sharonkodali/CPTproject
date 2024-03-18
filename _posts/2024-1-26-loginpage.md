@@ -5,7 +5,78 @@ description: A login screen that interacts with Python and obtains a JWT
 type: ccc
 courses: { csp: {week: 18 }}
 ---
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Apply Times New Roman to all elements, correcting the font family and ensuring consistency */
+        * {
+            font-family: 'Times New Roman', Times, serif !important; /* Ensure Times New Roman is used */
+            margin: 0; /* Reset default margin for all elements */
+            padding: 0; /* Reset default padding for all elements */
+        }
+        body {
+            margin: 50px; /* Add custom margin to the body for better layout */
+        }
+        /* Additional styles to enhance form and text appearance */
+        div#titleContainer h1, div.container form p, div.container form a {
+            margin: 20px 0; /* Add some spacing around elements for better readability */
+        }
+        input.userInput, button {
+            display: block; /* Make input fields and button block-level for full width */
+            margin: 10px 0; /* Add some margin for spacing */
+            padding: 8px; /* Add padding for better text visibility and field interaction */
+        }
+        button {
+            cursor: pointer; /* Change cursor to pointer when hovering over the button */
+            background-color: #007bff; /* Add a background color to the button */
+            color: white; /* Change the button text color to white */
+            border: none; /* Remove default border from the button */
+            border-radius: 4px; /* Add rounded corners to the button */
+        }
+        a {
+            color: #007bff; /* Style the link color to match the button for consistency */
+            text-decoration: none; /* Remove underline from links */
+        }
+        a:hover {
+            text-decoration: underline; /* Add underline on hover for links for better user interaction */
+        }
+         {
+            font-family: 'Times New Roman', Times, serif !important;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 50px;
+        }
+        div#titleContainer h1, div.container form p, div.container form a {
+            margin: 20px 0;
+        }
+        input.userInput, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Specific style for the Register link to appear white */
+        a[href*='Signup'] {
+            color: white; /* Make the Register link white */
+        }
+    </style>
 <!-- 
 A simple HTML login form with a Login action when the button is pressed.  
 
@@ -63,7 +134,7 @@ The script defines a function when the page loads. This function is triggered wh
             }
             // Success!!!
             // Redirect to the database page
-            window.location.href = "{{site.baseurl}}/data/database";
+            window.location.href = "{{site.baseurl}}/sechome";
         })
         // catch fetch errors (ie ACCESS to server blocked)
         .catch(err => {

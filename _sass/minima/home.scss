@@ -1,0 +1,65 @@
+/* Enhanced aesthetic for a rustic, old library look */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif; /* Classic font choice */
+    background-color: #f0e6d2; /* A soft, aged paper-like background color */
+}
+.collage-background {
+    background-image: url('https://wallpapercave.com/wp/wp11160822.jpg');
+    background-size: cover; // Ensures the background covers the entire div area
+    background-position: center; // Centers the background image in the div
+    height: 500px; // Set the desired height for your collage area
+    width: 90%; // Sets the width to be 100% of the container
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+    align-items: flex-end; /* Aligns items to the right */
+    padding: 40px; /* Adds some spacing around the buttons */
+    position: absolute; /* Positioning relative to its nearest positioned ancestor or to the initial containing block */
+    top: 65px; /* Increased from 0 to 65px to move the container down */
+    right: 0;
+}
+
+/* Styles for the buttons */
+button {
+    width: 250px; /* Set a specific width for all buttons */
+    margin-bottom: 10px; /* Adds spacing between buttons */
+    margin-top: 10px; /* If you want space above the first button as well */
+    padding: 10px 20px; /* Adjusts the size of the buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-weight: bold; /* Makes the text bold */
+    background-color: #8b4513; 
+    color: #fdf4e3; 
+    border: #fbb559; /* Removes the border from the buttons */
+    border-radius: 5px; /* Adds rounded corners to the buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for interactive elements */
+}
+
+/* Last button should not have a margin at the bottom */
+button:last-child {
+    margin-bottom: 0;
+}
+
+/* Enhancing button interactivity */
+button:hover {
+    background-color: #a0522d; /* A slightly lighter brown for hover state */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* A deeper shadow for a "lifted" effect */
+    
+    a {
+        color: white;
+        text-decoration: none;
+    
+        &:visited {
+            color: white;
+        }
+    
+        &:hover {
+            color: #f5f5dc;
+        }
+    }
+    
+}

@@ -1,5 +1,5 @@
 ---
-title: JWT Login (python/flask)
+title: Login page for users
 layout: base
 description: A login screen that interacts with Python and obtains a JWT  
 type: ccc

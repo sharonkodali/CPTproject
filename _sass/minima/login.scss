@@ -1,10 +1,9 @@
 /* Custom Styles for Login Page */
-
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background: #4e7dc3;
+    background: #6f4405;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -42,7 +41,7 @@ form {
         }
 
         button {
-            background: #2e406b;
+            background: #fbb559;
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -61,5 +60,5 @@ form {
             }
         }
     }
- margin-top: 5px;
-    }
+    margin-top: 5px;
+}
