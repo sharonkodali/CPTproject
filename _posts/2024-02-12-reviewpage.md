@@ -107,6 +107,7 @@ permalink: /Review
     .catch(err => {
         console.error('There was a problem with the fetch operation: ' + err.message);
     });
+    })});
 </script>
 </body>
 </html>
