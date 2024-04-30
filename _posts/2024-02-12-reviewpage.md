@@ -7,12 +7,11 @@ courses: {'compsci': {'week': 4}}
 type: hacks
 permalink: /Review
 ---
----
 <html lang="en">
 <head>
     <style>
-        body, input, textarea, button, h2, h3, label { /* Add more selectors as needed */
-            font-family: 'Times New Roman', Times, serif; /* This ensures consistency */
+        body, input, textarea, button, h2, h3, label {
+            font-family: 'Times New Roman', Times, serif; 
         }
         body {
             margin: 50px;
@@ -38,7 +37,7 @@ permalink: /Review
             gap: 10px;
         }
         .flex-container h2, .flex-container input[type="text"] {
-            margin: 0; /* Adjust spacing as needed */
+            margin: 0; 
         }
     </style>
 </head>
@@ -47,37 +46,43 @@ permalink: /Review
         <h2>Book Title:</h2>
         <input type="text" id="bookTitle" placeholder="Enter book title"> 
     </div>
-    <!-- Review Form -->
     <form id="reviewForm">
         <h3>Write a Review</h3>
         <textarea id="reviewText" placeholder="Write your review here"></textarea>
         <h3>Rating</h3>
+        <!-- this is an input for the user to select which rating they would give a book -->
         <input type="radio" name="rating" value="1" id="rating1"><label for="rating1">1</label>
         <input type="radio" name="rating" value="2" id="rating2"><label for="rating2">2</label>
         <input type="radio" name="rating" value="3" id="rating3"><label for="rating3">3</label>
         <input type="radio" name="rating" value="4" id="rating4"><label for="rating4">4</label>
         <input type="radio" name="rating" value="5" id="rating5"><label for="rating5">5</label>
-        <!-- Submit Button -->
+        <!-- the submit button calls to the submitReview function. -->
         <input type="submit" id="submitReview" value="Submit Review">
     </form>
-    <!-- JavaScript to handle the form submission -->
+    <!-- js to handle the form submission -->
     <script type="module">
-        // uri variable and options object are obtained from config.js
         import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
+        // makes sure page is loaded before code starts 
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('reviewForm').addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent the default form submission
+           // this procedure is named submitReview, and is a void procedure which means it does not have a return type. The parameters for this code are the title, review and ratings. 
+           document.getElementById('reviewForm').addEventListener('submit', 
+            function(submitReview) {
+                submitReview.preventDefault(); 
                 const title = document.getElementById("bookTitle").value;
                 const review = document.getElementById("reviewText").value;
                 const ratings = document.querySelectorAll('input[name="rating"]');
                 let ratingValue;
+                // the "for" loop iterates until it finds the value that the user selected.
                 for (const rating of ratings) {
+                    // if statement represents selection
                     if (rating.checked) {
                         ratingValue = rating.value;
                         break;
                     }
                 }
                 const body = {
+                // sequence is shown by the steps that occur, creating a body, fetching the data, handling the proper respons
+                 shown by the steps that occur, creating a body, fetching the data, handling the proper respons
                     title: title,
                     review: review,
                     rating: parseInt(ratingValue),
@@ -86,26 +91,25 @@ permalink: /Review
                 console.log(JSON.stringify(body));
                 console.log(options);
                   fetch("http://127.0.0.1:8086/api/book_reviews/", {
-        ...options, // Ensure this is within the fetch config object
-        method: 'GET',
+        ...options, 
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        // body: JSON.stringify(body) // Uncomment if needed, typically for POST requests
+        body: JSON.stringify(body) 
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+            throw new Error(response.statusText);
         }
-        return response.json(); // or response.text() if your server responds with plain text
+        return response.json(); 
     })
     .then(data => {
-        // Handle the response data
         console.log(data);
         window.location.href = "/CPTproject/reviews/database";
     })
     .catch(err => {
-        console.error('There was a problem with the fetch operation: ' + err.message);
+        console.error(err.message);
     });
     })});
 </script>
